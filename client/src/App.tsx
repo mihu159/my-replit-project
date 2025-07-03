@@ -11,6 +11,7 @@ import Analysis from "@/pages/analysis";
 import Progress from "@/pages/progress";
 import Education from "@/pages/education";
 import Admin from "@/pages/admin";
+import MobileExercise from "@/pages/mobile-exercise";
 
 function Router() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -25,6 +26,7 @@ function Router() {
           <Route path="/analysis" component={Analysis} />
           <Route path="/progress" component={Progress} />
           <Route path="/education" component={Education} />
+          <Route path="/mobile-exercise" component={MobileExercise} />
           <Route path="/admin" component={Admin} />
         </>
       )}

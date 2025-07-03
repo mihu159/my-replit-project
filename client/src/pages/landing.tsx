@@ -54,6 +54,24 @@ export default function Landing() {
           </div>
         </div>
 
+        {/* Device Compatibility Notice */}
+        <div className="mt-16 bg-blue-50 border border-blue-200 rounded-lg p-6">
+          <div className="text-center">
+            <h2 className="text-xl font-semibold text-blue-900 mb-3">Works on Your Device</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+              <div className="text-blue-700">
+                <strong>Smartphones & Tablets:</strong> Full camera-based posture analysis
+              </div>
+              <div className="text-blue-700">
+                <strong>Kindle Fire:</strong> Camera-free guided exercises
+              </div>
+              <div className="text-blue-700">
+                <strong>Desktop:</strong> Complete AI-powered experience
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Features Grid */}
         <div className="mt-24">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
