@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(224, 71.4%, 4.1%);
+  --muted: hsl(220, 14.3%, 95.9%);
+  --muted-foreground: hsl(220, 8.9%, 46.1%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(224, 71.4%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(224, 71.4%, 4.1%);
+  --border: hsl(220, 13%, 91%);
+  --input: hsl(220, 13%, 91%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(222, 84%, 4.9%);
+  --secondary: hsl(153, 60%, 53%);
+  --secondary-foreground: hsl(222, 84%, 4.9%);
+  --accent: hsl(37, 91%, 55%);
+  --accent-foreground: hsl(222, 84%, 4.9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(210, 20%, 98%);
+  --ring: hsl(217, 91%, 60%);
+  --radius: 0.75rem;
+  
+  /* Fitness app specific colors */
+  --fitness-primary: hsl(217, 91%, 60%);
+  --fitness-secondary: hsl(153, 60%, 53%);
+  --fitness-accent: hsl(37, 91%, 55%);
+  --fitness-neutral: hsl(220, 8.9%, 46.1%);
+  --fitness-light-gray: hsl(220, 14.3%, 95.9%);
+}
+
+.dark {
+  --background: hsl(224, 71.4%, 4.1%);
+  --foreground: hsl(210, 20%, 98%);
+  --muted: hsl(215, 27.9%, 16.9%);
+  --muted-foreground: hsl(217.9, 10.6%, 64.9%);
+  --popover: hsl(224, 71.4%, 4.1%);
+  --popover-foreground: hsl(210, 20%, 98%);
+  --card: hsl(224, 71.4%, 4.1%);
+  --card-foreground: hsl(210, 20%, 98%);
+  --border: hsl(215, 27.9%, 16.9%);
+  --input: hsl(215, 27.9%, 16.9%);
+  --primary: hsl(217, 91%, 60%);
+  --primary-foreground: hsl(222, 84%, 4.9%);
+  --secondary: hsl(153, 60%, 53%);
+  --secondary-foreground: hsl(222, 84%, 4.9%);
+  --accent: hsl(37, 91%, 55%);
+  --accent-foreground: hsl(222, 84%, 4.9%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(210, 20%, 98%);
+  --ring: hsl(217, 91%, 60%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer components {
+  .fitness-gradient {
+    background: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(153, 60%, 53%) 100%);
+  }
+  
+  .posture-good {
+    @apply bg-green-50 border-green-200 text-green-800;
+  }
+  
+  .posture-warning {
+    @apply bg-yellow-50 border-yellow-200 text-yellow-800;
+  }
+  
+  .posture-error {
+    @apply bg-red-50 border-red-200 text-red-800;
+  }
+  
+  .progress-ring {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+
+  /* Enhanced mobile responsiveness */
+  @media (max-width: 768px) {
+    .camera-feed {
+      aspect-ratio: 4/3;
+    }
+    
+    .mobile-optimized {
+      font-size: 0.875rem;
+      padding: 0.75rem;
+    }
+  }
+  
+  /* Kindle Fire optimization */
+  @media (max-width: 1024px) and (max-height: 600px) {
+    .kindle-layout {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}
